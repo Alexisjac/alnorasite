@@ -27,7 +27,18 @@ export default function RootLayout({ children }) {
           property="og:description"
           content="Services de nettoyage extérieur premium, efficaces et professionnels."
         />
-        <meta property="og:image" content="/favicon.png" />
+        <meta property="og:image" content="/preview.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://alnora.ca" />
+
+        {/* Twitter Card (pour X / Twitter) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Alnora — Nettoyage extérieur haut de gamme" />
+        <meta
+          name="twitter:description"
+          content="Services de nettoyage extérieur premium, efficaces et professionnels."
+        />
+        <meta name="twitter:image" content="/preview.png" />
 
         {/* Couleur de thème pour mobile */}
         <meta name="theme-color" content="#00B140" />
