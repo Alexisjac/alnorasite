@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Head from "next/head";
 
 const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycby4O9Lf5sfRV-w0iTq7jXdnEIQBWchbp3UYqHhbfceBQOswN_2HFw8N4vjfT7fVyjFW/exec";
@@ -29,15 +28,15 @@ async function submitForm(data) {
 export default function Page() {
   return (
     <div className="bg-white text-gray-900">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Alnora</title>
+      <head>
+        <title>Alnora | Nettoyage extérieur résidentiel & commercial</title>
         <meta
           name="description"
-          content="Alnora — Services de nettoyage extérieur haut de gamme : lavage à pression, bacs, scellant d’asphalte, fenêtres, gouttières. Résidentiel & commercial."
+          content="Alnora offre un service haut de gamme de nettoyage extérieur : lavage à pression, fenêtres, gouttières et plus, en Brome-Missisquoi, Haute-Yamaska et Rouville."
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </head>
 
       {/* HEADER */}
       <header className="border-b bg-white/90 backdrop-blur sticky top-0 z-40 shadow-sm">
@@ -53,7 +52,6 @@ export default function Page() {
             <a href="#work" className="hover:text-emerald-800">Travailler avec nous</a>
           </nav>
           <div className="flex items-center gap-3">
-            {/* numéro enlevé du header */}
             <a
               href="mailto:contact@alnora.ca"
               className="rounded-lg bg-emerald-800 px-4 py-2 text-sm font-bold text-white hover:bg-emerald-700"
@@ -88,19 +86,13 @@ export default function Page() {
             >
               Obtenir une soumission
             </a>
-            <a
-              href="tel:2633809382"
-              className="rounded-xl bg-white px-8 py-4 text-lg font-extrabold text-emerald-900 shadow hover:bg-gray-100 transition"
-            >
-              📞 263-380-9382
-            </a>
           </div>
         </div>
       </section>
 
       {/* BANDEAU GARANTIE / STATS */}
       <div className="bg-emerald-900 text-white py-3 overflow-hidden">
-        <div className="animate-marquee whitespace-nowrap text-center font-bold text-lg">
+        <div className="animate-marquee whitespace-nowrap text-center font-bold text-sm md:text-lg">
           ✅ Satisfaction garantie • Pas satisfait? On revient • Depuis 2019
         </div>
       </div>
@@ -136,7 +128,9 @@ export default function Page() {
       <section id="form" className="bg-gray-100">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <h2 className="text-center text-4xl font-extrabold text-emerald-900">Demande de soumission</h2>
-          <p className="mt-3 text-center text-lg text-gray-700">Remplissez le formulaire et recevez une réponse rapide.</p>
+          <p className="mt-3 text-center text-lg text-gray-700">
+            Remplissez le formulaire et recevez une réponse rapide.
+          </p>
           <GeneralForm />
         </div>
       </section>
