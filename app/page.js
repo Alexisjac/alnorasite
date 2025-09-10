@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Head from "next/head";
 
 const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycby4O9Lf5sfRV-w0iTq7jXdnEIQBWchbp3UYqHhbfceBQOswN_2HFw8N4vjfT7fVyjFW/exec";
@@ -28,7 +29,8 @@ async function submitForm(data) {
 export default function Page() {
   return (
     <div className="bg-white text-gray-900">
-      <head>
+      {/* META HEAD */}
+      <Head>
         <title>Alnora | Nettoyage extérieur résidentiel & commercial</title>
         <meta
           name="description"
@@ -36,7 +38,7 @@ export default function Page() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
-      </head>
+      </Head>
 
       {/* HEADER */}
       <header className="border-b bg-white/90 backdrop-blur sticky top-0 z-40 shadow-sm">
@@ -79,18 +81,25 @@ export default function Page() {
           <p className="mt-6 text-xl md:text-2xl font-medium text-white/90 max-w-3xl mx-auto">
             Résidentiel & Commercial — Brome-Missisquoi • Haute-Yamaska • Rouville
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-6">
+          <div className="mt-10 flex flex-col items-center gap-4">
             <a
               href="#form"
               className="rounded-xl bg-amber-500 px-8 py-4 text-lg font-extrabold text-emerald-950 shadow hover:bg-amber-400 transition"
             >
               Obtenir une soumission
             </a>
+            {/* ✅ Numéro ajouté ici */}
+            <a
+              href="tel:2633809382"
+              className="text-xl font-bold bg-white/20 px-6 py-3 rounded-lg hover:bg-white/30 transition"
+            >
+              📞 263-380-9382
+            </a>
           </div>
         </div>
       </section>
 
-      {/* BANDEAU GARANTIE / STATS */}
+      {/* BANDEAU GARANTIE */}
       <div className="bg-emerald-900 text-white py-3 overflow-hidden">
         <div className="animate-marquee whitespace-nowrap text-center font-bold text-sm md:text-lg">
           ✅ Satisfaction garantie • Pas satisfait? On revient • Depuis 2019
